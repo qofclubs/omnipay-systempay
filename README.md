@@ -2,7 +2,7 @@
 
 **SystemPay driver for the Omnipay PHP payment processing library**
 
-[![Build Status](https://travis-ci.org/hounddd/omnipay-systempay.png?branch=master)](https://travis-ci.org/hounddd/omnipay-systempay)
+[![Build Status](https://travis-ci.org/Hounddd/omnipay-systempay.svg?branch=master)](https://travis-ci.org/hounddd/omnipay-systempay)
 [![Latest Stable Version](https://poser.pugx.org/hounddd/omnipay-systempay/version.png)](https://packagist.org/packages/hounddd/omnipay-systempay)
 [![Total Downloads](https://poser.pugx.org/hounddd/omnipay-systempay/d/total.png)](https://packagist.org/packages/hounddd/omnipay-systempay)
 
