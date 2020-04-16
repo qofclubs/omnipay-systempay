@@ -12,7 +12,7 @@ class CompletePurchaseRequestTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->request = new CompletePurchaseRequest($this->getHttpClient(), $this->getHttpRequest());
+        $this->request = new CompletePurchaseRequest( $this->getHttpClient(), $this->getHttpRequest() );
     }
 
     /**
