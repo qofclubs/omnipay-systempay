@@ -2,6 +2,8 @@
 namespace Omnipay\SystemPay;
 
 use Omnipay\Common\AbstractGateway;
+use Omnipay\SystemPay\Message\CompletePurchaseRequest;
+use Omnipay\SystemPay\Message\PurchaseRequest;
 
 /**
  * SystemPay Gateway
@@ -47,11 +49,11 @@ class Gateway extends AbstractGateway
 
     public function purchase(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\SystemPay\Message\PurchaseRequest', $parameters);
+        return $this->createRequest(PurchaseRequest::class, $parameters);
     }
 
     public function completePurchase(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\SystemPay\Message\CompletePurchaseRequest', $parameters);
+        return $this->createRequest(CompletePurchaseRequest::class, $parameters);
     }
 }
