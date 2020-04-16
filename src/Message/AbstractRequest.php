@@ -210,6 +210,12 @@ abstract class AbstractRequest extends OmnipayAbstractRequest
     }
 
 
+    public function getAmount()
+    {
+        return $this->getAmountInteger()."";
+    }
+
+
     /**
      * @see https://payzen.eu/wp-content/uploads/2013/04/Guide_d_implementation_formulaire_paiement_PayZen_v3.4.pdf
      */
