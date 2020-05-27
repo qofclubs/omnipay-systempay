@@ -26,6 +26,13 @@ class Gateway extends AbstractGateway
             'testMode' => false,
         );
     }
+    
+    
+    public function setParameter($key, $value)
+    {
+        return parent::setParameter($key, $value);
+    }
+    
 
     public function getMerchantId()
     {
