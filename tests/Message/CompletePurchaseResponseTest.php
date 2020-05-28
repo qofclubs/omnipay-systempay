@@ -1,4 +1,5 @@
 <?php
+
 namespace Omnipay\SystemPay\Message;
 
 use Omnipay\Tests\TestCase;
@@ -7,7 +8,7 @@ class CompletePurchaseResponseTest extends TestCase
 {
     public function testConstruct()
     {
-        $response = new CompletePurchaseResponse($this->getMockRequest(), array(
+        $response = new CompletePurchaseResponse( $this->getMockRequest(), array(
             'vads_amount' => '3000',
             'vads_auth_mode' => 'FULL',
             'vads_auth_number' => '3fb0de',
@@ -57,14 +58,14 @@ class CompletePurchaseResponseTest extends TestCase
             'vads_payment_config' => 'SINGLE',
             'vads_page_action' => 'PAYMENT',
             'signature' => '3132f1e451075f2408cda41f2e647e9b4747d421',
-        ));
+        ) );
 
 
-        $this->assertTrue($response->isSuccessful());
-        $this->assertFalse($response->isRedirect());
-        $this->assertSame('00', $response->getCode());
+        $this->assertTrue( $response->isSuccessful() );
+        $this->assertFalse( $response->isRedirect() );
+        $this->assertSame( '00', $response->getCode() );
 
-        $this->assertSame('454058', $response->getTransactionReference());
-        $this->assertSame('20140902094139', $response->getTransactionDate());
+        $this->assertSame( '454058', $response->getTransactionReference() );
+        $this->assertSame( '20140902094139', $response->getTransactionDate() );
     }
 }

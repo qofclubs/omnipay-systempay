@@ -28,5 +28,4 @@ class GatewayTest extends GatewayTestCase
         $this->assertInstanceOf('Omnipay\SystemPay\Message\CompletePurchaseRequest', $request);
         $this->assertSame('1000', $request->getAmount());
     }
-
 }

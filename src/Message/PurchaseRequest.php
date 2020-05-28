@@ -8,6 +8,14 @@ namespace Omnipay\SystemPay\Message;
 class PurchaseRequest extends AbstractRequest
 {
 
+    public $liveEndpoint = 'https://paiement.systempay.fr/vads-payment/';
+
+
+    public function getMerchantId()
+    {
+        return $this->getParameter('merchantId');
+    }
+
     /**
      *
      */
@@ -20,7 +28,7 @@ class PurchaseRequest extends AbstractRequest
         $data['vads_ctx_mode'] = $this->getTestMode() ? 'TEST' : 'PRODUCTION';
         $data['vads_trans_id'] = $this->getTransactionId();
         $data['vads_trans_date'] = $this->getTransactionDate();
-        $data['vads_amount'] = $this->getAmount();
+        $data['vads_amount'] = $this->getAmountInteger();
         $data['vads_currency'] = $this->getCurrencyNumeric();
         $data['vads_action_mode'] = 'INTERACTIVE';
         $data['vads_page_action'] = 'PAYMENT';
@@ -74,5 +82,11 @@ class PurchaseRequest extends AbstractRequest
     public function sendData($data)
     {
         return $this->response = new PurchaseResponse($this, $data);
+    }
+
+
+    public function getEndpoint()
+    {
+        return $this->liveEndpoint;
     }
 }
