@@ -4,7 +4,7 @@ namespace Omnipay\SystemPay;
 use Omnipay\Common\AbstractGateway;
 
 /**
- * SystemPay Gateway
+ * SystemPay Gatewayz
  *
  * @author Aurélien Schelcher <a.schelcher@ubitransports.com>
  * @license http://opensource.org/licenses/mit-license.php MIT
