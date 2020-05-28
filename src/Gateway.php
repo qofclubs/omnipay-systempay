@@ -46,6 +46,11 @@ class Gateway extends AbstractGateway
     {
         return $this->setParameter('certificate', $value);
     }
+    
+    public function setParameter($key, $value)
+    {
+        return parent::setParameter($key, $value);
+    }
 
     public function purchase(array $parameters = array())
     {
