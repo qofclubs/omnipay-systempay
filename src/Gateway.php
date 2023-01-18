@@ -4,6 +4,8 @@ namespace Omnipay\SystemPay;
 use Omnipay\Common\AbstractGateway;
 use Omnipay\SystemPay\Message\CompletePurchaseRequest;
 use Omnipay\SystemPay\Message\PurchaseRequest;
+use Omnipay\SystemPay\Message\CompleteAuthorizeRequest;
+use Omnipay\SystemPay\Message\AuthorizeRequest;
 
 /**
  * SystemPay Gatewayz
@@ -64,11 +66,11 @@ class Gateway extends AbstractGateway
     
     public function authorize(array $parameters = array())
     {
-        return $this->createRequest(PurchaseRequest::class, $parameters);
+        return $this->createRequest(AuthorizeRequest::class, $parameters);
     }
 
     public function completeAuthorize(array $parameters = array())
     {
-        return $this->createRequest(CompletePurchaseRequest::class, $parameters);
+        return $this->createRequest(CompleteAuthorizeRequest::class, $parameters);
     }
 }
