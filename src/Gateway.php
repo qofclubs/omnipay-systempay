@@ -6,7 +6,7 @@ use Omnipay\SystemPay\Message\CompletePurchaseRequest;
 use Omnipay\SystemPay\Message\PurchaseRequest;
 
 /**
- * SystemPay Gateway
+ * SystemPay Gatewayz
  *
  * @author Aurélien Schelcher <a.schelcher@ubitransports.com>
  * @license http://opensource.org/licenses/mit-license.php MIT
@@ -58,6 +58,16 @@ class Gateway extends AbstractGateway
     }
 
     public function completePurchase(array $parameters = array())
+    {
+        return $this->createRequest(CompletePurchaseRequest::class, $parameters);
+    }
+    
+    public function authorize(array $parameters = array())
+    {
+        return $this->createRequest(PurchaseRequest::class, $parameters);
+    }
+
+    public function completeAuthorize(array $parameters = array())
     {
         return $this->createRequest(CompletePurchaseRequest::class, $parameters);
     }
