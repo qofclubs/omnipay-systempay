@@ -7,7 +7,7 @@ use Omnipay\Common\Message\AbstractResponse;
 /**
  * SystemPay Complete Purchase Response
  */
-class CompletePurchaseResponse extends AbstractResponse
+class CompleteAuthorizeResponse extends AbstractResponse
 {
     public function isSuccessful()
     {
