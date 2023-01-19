@@ -28,6 +28,16 @@ class Gateway extends AbstractGateway
             'testMode' => false,
         );
     }
+    
+    public function getCaptureDelay()
+    {
+        return $this->getParameter('captureDelay');
+    }
+
+    public function setCaptureDelay($value)
+    {
+        return $this->setParameter('captureDelay', $value);
+    }
 
     public function getMerchantId()
     {
