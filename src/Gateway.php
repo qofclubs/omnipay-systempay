@@ -66,6 +66,7 @@ class Gateway extends AbstractGateway
 
     public function purchase(array $parameters = array())
     {
+        $this->setCaptureDelay(0);
         return $this->createRequest(PurchaseRequest::class, $parameters);
     }
 
@@ -76,6 +77,7 @@ class Gateway extends AbstractGateway
     
     public function authorize(array $parameters = array())
     {
+        $this->setCaptureDelay(3);
         return $this->createRequest(AuthorizeRequest::class, $parameters);
     }
 
