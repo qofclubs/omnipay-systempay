@@ -4,7 +4,8 @@ namespace Omnipay\SystemPay\Message;
 
 /**
  * SystemPay Authorize Request
- * https://paiement.systempay.fr/doc/en-EN/form-payment/standard-payment/creating-a-deferred-payment.html
+ 
+ * @see https://paiement.systempay.fr/doc/en-EN/form-payment/standard-payment/creating-a-deferred-payment.html
  */
 class AuthorizeRequest extends AbstractRequest
 {
@@ -41,7 +42,7 @@ class AuthorizeRequest extends AbstractRequest
         $data['vads_version'] = 'V2';
         $data['vads_payment_config'] = 'SINGLE';
         $data['vads_capture_delay'] = $this->getCaptureDelay();
-        $data['vads_validation_mode'] = 1;
+        $data['vads_validation_mode'] = 0;
         $data['vads_url_success'] = $this->getSuccessUrl();
         $data['vads_url_cancel'] = $this->getCancelUrl();
         $data['vads_url_error'] = $this->getErrorUrl();
