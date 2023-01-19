@@ -41,7 +41,7 @@ class AuthorizeRequest extends AbstractRequest
         $data['vads_page_action'] = 'PAYMENT';
         $data['vads_version'] = 'V2';
         $data['vads_payment_config'] = 'SINGLE';
-        $data['vads_capture_delay'] = $this->getCaptureDelay();
+        $data['vads_capture_delay'] = 3;
         $data['vads_validation_mode'] = 0;
         $data['vads_url_success'] = $this->getSuccessUrl();
         $data['vads_url_cancel'] = $this->getCancelUrl();
