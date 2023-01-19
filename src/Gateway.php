@@ -8,7 +8,7 @@ use Omnipay\SystemPay\Message\CompleteAuthorizeRequest;
 use Omnipay\SystemPay\Message\AuthorizeRequest;
 
 /**
- * SystemPay Gatewayz
+ * SystemPay Gateway
  *
  * @author Aurélien Schelcher <a.schelcher@ubitransports.com>
  * @license http://opensource.org/licenses/mit-license.php MIT
